@@ -1,0 +1,5 @@
+j_rs_first_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: JRsFirstBundle:Page:index }
+    requirements:
+      _method:  GET

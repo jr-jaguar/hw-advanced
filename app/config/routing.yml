@@ -1,0 +1,4 @@
+j_rs_first:
+    resource: "@JRsFirstBundle/Resources/config/routing.yml"
+    prefix:   /
+
