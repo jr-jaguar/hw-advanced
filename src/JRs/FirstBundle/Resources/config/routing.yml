@@ -1,5 +1,31 @@
 j_rs_first_homepage:
-    path:     /hello/{name}
+    path:     /
     defaults: { _controller: JRsFirstBundle:Page:index }
     requirements:
       _method:  GET
+
+j_rs_first_hello:
+    path:     /hello/{name}
+    defaults: { _controller: JRsFirstBundle:Page:hello }
+    requirements:
+      _method:  GET
+
+j_rs_first_registration:
+    path:     /registration
+    defaults: { _controller: JRsFirstBundle:Registration:form }
+    requirements:
+      _method:  GET|POST
+
+j_rs_first_users_show:
+    path:     /user/{id}
+    defaults: { _controller: JRsFirstBundle:Users:showUser }
+    requirements:
+      _method:  GET
+      id: \d+
+
+j_rs_first_users:
+    path:     /users
+    defaults: { _controller: JRsFirstBundle:Users:usersList }
+    requirements:
+      _method:  GET
+

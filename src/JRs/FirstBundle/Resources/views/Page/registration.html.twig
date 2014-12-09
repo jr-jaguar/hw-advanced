@@ -1,0 +1,21 @@
+{% extends 'JRsFirstBundle::layout.html.twig' %}
+
+{% block title %}Регистрация{% endblock%}
+
+{% block body %}
+    <header>
+        <h1>Регистрация</h1>
+    </header>
+    {% for flashMessage in app.session.flashbag.get('registration-massage') %}
+        <div>{{ flashMessage }}</div>
+    {% endfor %}
+    <p>Чтобы зарегестрироватся, заполните, пожалуйста, форму:</p>
+    <form action="{{ path('j_rs_first_registration') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+
+        <p>
+            <input type="submit" value="Submit">
+
+        </p>
+    </form>
+{% endblock %}
