@@ -1,0 +1,14 @@
+{% extends 'JRsFirstBundle::layout.html.twig' %}
+{% block body %}
+    <table width="100%">
+        <thead>Список пользователей</thead>
+    {% for user in users %}
+        <tr>
+            <td width="35%">
+                <h2><a href="{{ path('j_rs_first_users_show', { 'id': user.id }) }}">{{ user.login }}</a></h2>
+            </td>
+            <td>Зарегестрирован {{ user.dateRegistration|date('h:iA') }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
