@@ -12,6 +12,7 @@ class PageController extends Controller{
        for ($i=0;  $i<6; $i++){
         $rColor=rand(0,10);
         $color.=$rColor;
+
     }
 
         $date=date("d.m.y.H:i");

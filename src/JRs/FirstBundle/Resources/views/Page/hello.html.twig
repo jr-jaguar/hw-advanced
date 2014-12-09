@@ -1,5 +1,22 @@
 {% extends 'JRsFirstBundle::layout.html.twig' %}
 
 {% block body %}
+
     <h2 style="color: {{ color }}">hellow {{ name|upper }} now {{ date }}</h2>
+    <h2> Length: {{ name|length }}</h2>
+    <h2> lower: {{ name|lower }}</h2>
+    <h2> reverse: {{ name|reverse }}</h2>
+    <h2> slice: {{ name|slice(2, 2) }}</h2>
+    <h2> title: {{ name|title }}</h2>
+    <h2> upper: {{ name|upper }}</h2>
+    <h1>{{ color }}</h1>
+    <h2> first: {{ color|first }}</h2>
+    <h2> last: {{ color|last }}</h2>
+
+
+
+
+
+
+
 {% endblock %}
